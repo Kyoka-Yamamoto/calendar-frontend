@@ -1,0 +1,15 @@
+.container-side-menu {
+  width: 30%;
+  height: 50%;
+  background-color: beige;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventform {
+  width: 80%;
+  height: 90%;
+  background-color: darkseagreen;
+}
