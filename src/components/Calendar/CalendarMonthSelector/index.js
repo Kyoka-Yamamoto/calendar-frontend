@@ -1,24 +1,24 @@
+import { useSelector, useDispatch } from "react-redux";
+import { getMonthName } from "../../../libraries/time";
+import {
+  setSelectedYear,
+  setSelectedMonth,
+  fetchEvents,
+} from "../../../features/calendar/calendarSlice";
 import "./styles.css";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
-const CalendarMonthSelector = ({
-  selectedYear,
-  selectedMonth,
-  onMonthChange,
-}) => {
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+const CalendarMonthSelector = () => {
+  const dispatch = useDispatch();
+  const selectedYear = useSelector((state) => state.calendar.selectedYear);
+  const selectedMonth = useSelector((state) => state.calendar.selectedMonth);
+  const timeZone = useSelector((state) => state.calendar.timeZone);
+
+  const onMonthChange = (newMonth, newYear) => {
+    dispatch(setSelectedMonth(newMonth));
+    dispatch(setSelectedYear(newYear));
+    dispatch(fetchEvents({ year: newYear, month: newMonth, timeZone }));
+  };
 
   const goToPreviousMonth = () => {
     let newMonth = selectedMonth - 1;
@@ -44,9 +44,10 @@ const CalendarMonthSelector = ({
 
   return (
     <div className="calendar-month-selector">
-      <button onClick={goToPreviousMonth}>Previous</button>
-      <span>{monthNames[selectedMonth - 1]}</span>
-      <button onClick={goToNextMonth}>Next</button>
+      <LeftOutlined onClick={goToPreviousMonth} />
+
+      <span>{getMonthName(selectedMonth - 1)}</span>
+      <RightOutlined onClick={goToNextMonth} />
     </div>
   );
 };

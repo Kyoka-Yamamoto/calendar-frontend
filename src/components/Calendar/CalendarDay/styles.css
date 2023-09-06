@@ -1,8 +1,33 @@
 .calendar-day {
-  width: 14.285%;
-  height: 20%;
-  background-color: goldenrod;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: 24px;
-  padding: 10px;
-  border: 1px solid lightgray;
+  border: 1px solid #e0e0e0;
+  display: flex;
+}
+
+.day-container {
+  width: 7%;
+  display: flex;
+  justify-content: center;
+}
+
+.day-data {
+  height: 100%;
+  padding: 10%;
+  color: #696969;
+}
+
+.calendar-event-container {
+  width: 93%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.active {
+  background-color: #d4e0ff;
+  border-radius: 50%;
 }

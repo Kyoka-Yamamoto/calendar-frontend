@@ -1,15 +1,39 @@
 .container-side-menu {
   width: 30%;
-  height: 50%;
-  background-color: beige;
+  width: 400px;
+  height: 100vh;
+  max-height: 600px;
+  border-radius: 15px;
+  background-color: white;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.close-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.eventform-container {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .eventform {
-  width: 80%;
-  height: 90%;
-  background-color: darkseagreen;
+  margin-top: 2%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
 }
