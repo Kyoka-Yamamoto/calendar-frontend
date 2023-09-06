@@ -1,11 +1,10 @@
 .calendar-month-selector {
-  width: 70%;
+  width: 30%;
   height: 54px;
-  background-color: darkcyan;
-  border: 1px solid black;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 30px;
+  color: #696969;
 }

@@ -1,8 +1,14 @@
 import "./styles.css";
-import moment from "moment";
 
-const CalendarEvent = ({ event }) => {
-  return <div>{event.name}</div>;
+const CalendarEvent = ({ event, handleFormOpen }) => {
+  const handleCalendarEventClick = () => {
+    handleFormOpen(event);
+  };
+  return (
+    <div className="calendar-event" onClick={handleCalendarEventClick}>
+      {event.name}
+    </div>
+  );
 };
 
 export default CalendarEvent;

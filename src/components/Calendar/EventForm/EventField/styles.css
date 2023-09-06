@@ -1,0 +1,6 @@
+.form-item label {
+  display: flex;
+  width: 100px;
+  margin-right: 5px;
+  justify-content: flex-end;
+}

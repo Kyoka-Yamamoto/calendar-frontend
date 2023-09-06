@@ -1,0 +1,10 @@
+.calendar-year-display {
+  width: 30%;
+  height: 54px;
+  font-size: 30px;
+  color: #5bbbff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
