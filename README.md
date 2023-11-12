@@ -18,7 +18,9 @@ To run the application locally:
 
 ## Usage
 
-// demo video
+### Demo
+
+https://github.com/Kyoka-Yamamoto/calendar-frontend/assets/55196803/ba2bf334-338f-48ad-a2ef-49181d95011a
 
 ### Viewing Events
 
