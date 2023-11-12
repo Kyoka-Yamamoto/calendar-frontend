@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Calendar App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This is a vertical calendar app which shows events monthly. The app allows you to see calendar events for a given month, create new events, update existing events, and delete existing events.
 
-In the project directory, you can run:
+The app was built using React.js, Typescript, and Ant Design components.
 
-### `npm start`
+## Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the application locally:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Install dependencies using a package manager such as `npm` or `yarn`. If using `npm`, you can install dependencies by running the following command at the root directory of this project:
 
-### `npm test`
+`npm install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Ensure that the Calendar Backend app is running locally. You can find the repository for the backend here: https://github.com/Kyoka-Yamamoto/calendar-backend
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Demo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+https://github.com/Kyoka-Yamamoto/calendar-frontend/assets/55196803/ba2bf334-338f-48ad-a2ef-49181d95011a
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Viewing Events
 
-### `npm run eject`
+Events for the month will be displayed on the day they start. The current day will be highlighted on the current month by a blue circle around the day number. You can change the selected month using the selectors at the top of the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Creating Events
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can create an event by clicking on the number of the day, or in the empty space for a day with no events. A modal will open where you can enter the name, start time, end time, location, and description of the event. Location and description are optional fields. After entering the details for the event, you can click the `Create` button to create the event. After creating the event, it will show on the calendar.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Modifying Events
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You can update an existing event by clicking on the event in the calendar. This will open up a modal where you can either:
 
-## Learn More
+-   Update event details by changing the contents of the details and clicking the `Update` button
+-   Delete the event by clicking the `Delete` button
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Updating or deleting an event will show the changes immediately in the calendar.
