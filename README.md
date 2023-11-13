@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a vertical calendar app which shows events monthly. The app allows you to see calendar events for a given month, create new events, update existing events, and delete existing events.
+This is a vertical calendar app which shows events monthly and in your local timezone. The app allows you to see calendar events for a given month, create new events, update existing events, and delete existing events.
 
 The app was built using React.js, Typescript, and Ant Design components.
 
