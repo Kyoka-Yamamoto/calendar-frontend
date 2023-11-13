@@ -25,6 +25,7 @@ export const calendarSlice = createSlice({
     name: "calendar",
     initialState: {
         events: [],
+        isLoadingEvents: false,
         isFormVisible: false,
         activeEvent: null,
         activeDay: null,
@@ -51,11 +52,16 @@ export const calendarSlice = createSlice({
     },
     extraReducers(builder) {
         builder
+            .addCase(fetchEvents.pending, (state, action) => {
+                state.isLoadingEvents = true;
+            })
             .addCase(fetchEvents.fulfilled, (state, action) => {
                 state.events = action.payload;
+                state.isLoadingEvents = false;
             })
             .addCase(fetchEvents.rejected, (_state, action) => {
                 console.log("error fetching events", action.payload);
+                state.isLoadingEvents = false;
             });
     },
 });
